@@ -19,6 +19,7 @@ const UserPosts = () => {
   const [specific, setSpecific] = useState([]);
 
   const handleOpen = () => {
+    console.log('OI');
     setOpen(true);
   };
 
