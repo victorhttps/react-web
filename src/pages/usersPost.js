@@ -19,7 +19,6 @@ const UserPosts = () => {
   const [specific, setSpecific] = useState([]);
 
   const handleOpen = () => {
-    console.log('OI');
     setOpen(true);
   };
 
@@ -40,6 +39,7 @@ const UserPosts = () => {
     <div>
       <Modal
         style={{
+          paddingLeft: 700,
           alignItems: "center",
           justifyContent: "center",
           display: "flex",
@@ -51,9 +51,15 @@ const UserPosts = () => {
         aria-describedby="simple-modal-description"
       >
         <div style={{ backgroundColor: "white" }}>
-          <Typography style={{textAlign: "center"}}>{specific.title}</Typography>
+          <Typography style={{textAlign: "center"}}>
+          <div>UserID: {specific.userId}</div>
+          <div>Id do post: {specific.id}</div>
+          <div>{specific.title}</div>
+          <div>{specific.body}</div></Typography>
           <Divider />
-          <div>{specific.body}</div>
+          
+          
+          
         </div>
       </Modal>
       <Grid style={{ backgroundColor: "gray" }} container spacing={4}>
